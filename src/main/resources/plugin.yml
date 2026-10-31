@@ -1,0 +1,15 @@
+name: PotitoMobs
+version: 1.0.0
+main: com.potitosafio.mobs.PotitoMobs
+api-version: '1.21'
+author: PotitoSafio
+description: Multiplicadores independientes de daño, vida y velocidad para mobs no jefes.
+commands:
+  potitomobs:
+    description: Configurar multiplicadores de mobs
+    usage: /potitomobs <dano|vida|velocidad|estado|reset|recargar>
+    permission: potitomobs.admin
+permissions:
+  potitomobs.admin:
+    description: Administrar PotitoMobs
+    default: op

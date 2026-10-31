@@ -1,0 +1,30 @@
+# Multiplicadores independientes (persisten al reiniciar)
+multipliers:
+  damage: 1
+  health: 1
+  speed: 1
+# Se excluyen siempre jugadores y estas entidades. Amplía la lista para bosses de mods.
+bosses:
+  entity-types:
+    - ENDER_DRAGON
+    - WITHER
+    - WARDEN
+    - ELDER_GUARDIAN
+  # Etiqueta de scoreboard que puedes asignar a bosses de mods: /tag <entidad> add potitomobs_boss
+  scoreboard-tags:
+    - potitomobs_boss
+  # Coincidencias en nombre visible o tipo; ajusta según tus mods.
+  name-contains:
+    - boss
+  # Protección adicional para bosses de mods no identificados: vida base >= umbral
+  # 0 desactiva este filtro. Puede excluir mobs normales muy resistentes.
+  min-base-health: 200.0
+# Evita modificar aldeanos y NPCs (puedes ampliar la lista)
+excluded-entity-types:
+  - VILLAGER
+  - WANDERING_TRADER
+  - ARMOR_STAND
+  - IRON_GOLEM
+  - SNOW_GOLEM
+# Intervalo para detectar mobs cargados y restaurar atributos; ticks (20=1 segundo)
+scan-interval-ticks: 100
